@@ -1,0 +1,59 @@
+;Emacs like keymap
+^p::Send,  {Up}
+^f::Send,  {Right}
+^n::Send,  {Down}
+^b::Send,  {Left}
+^a::Send,  {Home}
+^e::Send,  {End}
+^d::Send,  {Delete}
+^h::Send,  {BackSpace}
+^j::Send,  {Enter}
+^k::Send,  {Shift}+{End}{BackSpace}
+!/::Send,  ^/
+
+;アンダースコアをShiftなしで入力
+vkE2::_
+
+;ファイル操作
+!s::Send, ^s
+!z::Send, ^z
+!y::Send, ^y
+!c::Send, ^c
+!v::Send, ^v
+
+;選択系
+!l::Send, {Home}+{End}
+
+;Reload
+!r::Send, ^r
+
+;数字を常に半角入力
++1::!
++2::"
++3::#
++4::$
+
++5::
+Send, {`%}
+return
+
++6::&
++7::'
++8::(
++9::)
++0::=
+
+1::Numpad1
+2::Numpad2
+3::Numpad3
+4::Numpad4
+5::Numpad5
+6::Numpad6
+7::Numpad7
+8::Numpad8
+9::Numpad9
+0::Numpad0
+
+;ウィンドウ系
+!+p::Send, ^+p
+!+n::Send, ^+n
